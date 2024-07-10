@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+  </head>
+
+  <body class="bg-[#f4f4f4]">
+    <!-- input-section -->
+    <div class="mx-auto min-w-[550px]">
+      <h1 class="text-6xl text-center my-9 text-[#e3d5d5]">todos</h1>
+    </div>
+    <div
+      class="w-[576px] m-auto h-auto bg-white border 3px border-solid rounded-sm flex justify-evenly"
+    >
+      <i
+        class="fa-solid fa-greater-than text-2xl scale-x-50 transform rotate-90 text-[#d3d3d3] cursor-pointer"
+        onClick="allTodoCompleted()"
+      ></i>
+      <input
+        type="text"
+        placeholder="What needs to be done ?"
+        autocomplete="off"
+        class="w-full h-16 text-xl pl-9 py-3 text-[#ebd7d8] focus:text-black focus:outline-none"
+        id="newToDo"
+      />
+      <hr />
+    </div>
+
+    <!-- list-section -->
+    <ul id="result"></ul>
+
+    <!-- call-to-action-section -->
+    <div class="w-[576px] m-auto h-[50px] bg-white border 3px border-solid rounded-sm flex justify-around space-x-3">
+      <div>
+        <p id="todo-count" class="px-3 h-fit mt-3">0 items left</p>
+      </div>
+      <div>
+        <button id="filter-all" class="px-3 border h-fit mt-3">All</button>
+        <button id="filter-active" class="px-3 border h-fit mt-3">
+          Active
+        </button>
+        <button id="filter-completed" class="px-3 border h-fit mt-3">
+          Completed
+        </button>
+      </div>
+      <div>
+        <button id="clear-completed" class="px-3 border h-fit mt-3">
+          Clear Completed
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="bg-white w-[571px] m-auto h-[6px] border 3px border-solid"
+    ></div>
+    <div
+      class="bg-white w-[566px] m-auto h-[6px] border 3px border-solid"
+    ></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
